@@ -3,29 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        * {padding: 0;margin: 0;box-sizing:border-box;font-family: sans-serif;}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos.css' %}"/>
 
-        .left{display:flex;justify-content: space-between;font-size: 2em;padding: 1em;}
-        .right{display:flex;justify-contents: end;font-size: 2em;padding: 1em;}
-        header{height: 10vh;background: #1f0000;color: blue;top: 0;display:flex;justify-content: space-between;align-items: center;}
-        footer {height:5vh;display:flex;justify-content: flex-end;padding: 0 2vw;align-items: center;}
-    </style>
+    {% block style %}{% endblock style %}
+
 </head>
-<body>
+<body class="background">
     <header>
         <div class="left">Daniel Granja</div>
-        <nav class="right"><a href="{% url 'portfolio:home' %}">menu</a>
+        <nav class="right">
+            <a class="right" href="{% url 'portfolio:home' %}">Home</a>
+            <a class="right" href="{% url 'portfolio:apresentação' %}">Apresentação</a>
+            <a class="right" href="{% url 'portfolio:formação' %}">Formação</a>
+            <a class="right" href="{% url 'portfolio:projetos' %}">Projetos</a>
+
 
         </nav>
 
-
-        <main>
-
-        </main>
     </header>
 
+        <main>
+            {% block main %}
+            {% endblock main %}
+        </main>
 
-    <footer></footer>
+
+
+    <footer style="">
+        <div>
+            ULHT : 2022
+        </div>
+    </footer>
 </body>
 </html>
