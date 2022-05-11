@@ -17,3 +17,6 @@ def projetos_page_view(request):
 
 def competencias_page_view(request):
     return render(request, 'portfolio/competencias.html')
+
+def blog_page_view(request):
+    return render(request, 'portfolio/blog.html')
