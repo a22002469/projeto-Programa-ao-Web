@@ -15,4 +15,5 @@ urlpatterns = [
     path('edita/<int:post_id>', views.view_editar_post, name='edita'),
     path('apaga/<int:post_id>', views.view_apagar_post, name='apaga'),
 
+
 ]
