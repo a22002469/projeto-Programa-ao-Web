@@ -6,3 +6,6 @@ class Post(models.Model):
     data = models.DateTimeField(auto_now_add=True)
     titulo = models.CharField(max_length=50)
     descricao = models.CharField(max_length=500)
+
+    def __str__(self):
+        return f"{self.titulo}"
