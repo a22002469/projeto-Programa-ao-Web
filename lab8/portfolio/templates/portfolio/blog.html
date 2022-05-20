@@ -5,23 +5,27 @@
 {% block main %}
 	<h3>Apresentacao</h3>
     <p>texto texto texto texto texto texto texto </p>
-    <a href="{% url 'portfolio:nova' %}" style="color: white">Criar Post</a>
+    <a href="{% url 'portfolio:nova' %}" >Criar Post</a>
+<div class="container">
     {% for posts in post %}
-    <p style="color: white">
+        <div>
+    <p >
     {{posts.autor }}
     </p>
 
-        <p style="color: white">
+        <p >
         {{ posts.titulo }}
         </p>
 
 
-        <p style="color: white">
+        <p >
         {{ posts.descricao }}
         </p>
+ </div>
 
         <a href="{% url 'portfolio:edita' posts.id %}" style="color: white">Edita Post</a>
-    {% endfor %}
 
+    {% endfor %}
+</div>
 {% endblock main%}
 
