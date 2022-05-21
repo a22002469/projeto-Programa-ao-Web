@@ -3,27 +3,27 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-	<h3>Apresentacao</h3>
-    <p>texto texto texto texto texto texto texto </p>
-    <a href="{% url 'portfolio:nova' %}" >Criar Post</a>
+	<h3 style="color:white">Blog</h3>
+
+    <a class="rright" href="{% url 'portfolio:nova' %}" style="justify-content: center;align-items: center; width: 15%;left: 42%; background-color: cornflowerblue">Criar Post</a>
 <div class="container">
     {% for posts in post %}
         <div>
-    <p >
-    {{posts.autor }}
+    <p style="color: white">
+    Autor: {{posts.autor }}.
     </p>
 
-        <p >
-        {{ posts.titulo }}
+        <p style="color: white">
+       Titulo: {{ posts.titulo }}.
         </p>
 
 
-        <p >
-        {{ posts.descricao }}
+        <p style="color: white">
+        Descrição: {{ posts.descricao }}.
         </p>
  </div>
 
-        <a href="{% url 'portfolio:edita' posts.id %}" style="color: white">Edita Post</a>
+        <a class="rright" href="{% url 'portfolio:edita' posts.id %}" style="justify-content: center;align-items: center; width: 15%;left: 42%;background-color: cornflowerblue">Edita Post</a>
 
     {% endfor %}
 </div>
