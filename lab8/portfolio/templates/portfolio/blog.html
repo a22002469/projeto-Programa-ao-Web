@@ -21,9 +21,10 @@
         <p style="color: white">
         Descrição: {{ posts.descricao }}.
         </p>
+         <a class="rright" href="{% url 'portfolio:edita' posts.id %}" style=" width: 15%;float: right;margin-bottom: 100px ;margin-top: 0px; background-color: cornflowerblue">Edita Post</a>
  </div>
 
-        <a class="rright" href="{% url 'portfolio:edita' posts.id %}" style="justify-content: center;align-items: center; width: 15%;left: 42%;background-color: cornflowerblue">Edita Post</a>
+
 
     {% endfor %}
 </div>
