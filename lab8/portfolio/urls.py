@@ -17,6 +17,7 @@ urlpatterns = [
     path('licenciatura', views.licenciatura_page_view, name='licenciatura'),
     path('contacto', views.contacto_page_view, name='contacto'),
     path('web', views.web_page_view, name='web'),
+    path('quizz', views.quizz_page_view, name='quizz'),
 
 
 

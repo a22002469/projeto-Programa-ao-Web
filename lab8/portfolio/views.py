@@ -33,6 +33,9 @@ def competencias_page_view(request):
 def contacto_page_view(request):
     return render(request, 'portfolio/contacto.html')
 
+def quizz_page_view(request):
+    return render(request, 'portfolio/quizz.html')
+
 def web_page_view(request):
     return render(request, 'portfolio/web.html')
 
