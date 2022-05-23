@@ -79,18 +79,21 @@
     margin-left: auto;
     margin-right: auto;
     background-color: #201120FF;
-    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
     height: 100px;
 }
 
-.containerReverso{
-    width: 70%;
+.containerContacto{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
     padding: 2%;
     margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
     background-color: #201120FF;
-    box-shadow: rgba(27, 250, 2, 0.8) -5px -5px, rgba(45, 204, 21, 0.6) 10px -10px, rgba(16, 105, 4, 0.4) -15px -15px, rgba(36, 117, 37, 0.2) -20px -20px, rgba(240, 46, 170, 0.05) -25px -25px;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
 }
 .rright:is(:hover,:focus)::after {
     transform: scale(1);
