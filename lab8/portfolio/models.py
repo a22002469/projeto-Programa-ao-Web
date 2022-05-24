@@ -9,3 +9,14 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.titulo}"
+
+
+class Quizz(models.Model):
+    nome = models.CharField(max_length=50)
+    pergunta1 = models.CharField(max_length=50)
+    pergunta2 = models.CharField(max_length=50)
+    pergunta3 = models.CharField(max_length=50)
+    pergunta4 = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.nome}"

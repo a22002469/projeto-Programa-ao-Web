@@ -4,6 +4,8 @@ from django.urls import reverse
 
 from portfolio.forms import PostForm
 from portfolio.models import Post
+from portfolio.forms import QuizzForm
+from portfolio.models import Quizz
 
 
 def home_page_view(request):
@@ -30,14 +32,28 @@ def projetos_page_view(request):
 def competencias_page_view(request):
     return render(request, 'portfolio/competencias.html')
 
+
 def contacto_page_view(request):
     return render(request, 'portfolio/contacto.html')
 
+
 def quizz_page_view(request):
-    return render(request, 'portfolio/quizz.html')
+    form = QuizzForm(request.POST, use_required_attribute=False)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(request.path_info)
+
+    context = {
+        'form' : form,
+    }
+
+    return render(request, 'portfolio/quizz.html', context)
+
 
 def web_page_view(request):
     return render(request, 'portfolio/web.html')
+
 
 def blog_page_view(request):
     context = {'post': Post.objects.all()}
