@@ -25,7 +25,11 @@ class Quizz(models.Model):
 class Projetos(models.Model):
     nome = models.CharField(max_length=50)
     descricao = models.CharField(max_length=500)
+    data = models.IntegerField(max_length=50)
+    linguagens = models.CharField(max_length=100)
     imagem = models.ImageField(upload_to='media/', null=True)
+
+
 
     def __str__(self):
         return f"{self.nome}"

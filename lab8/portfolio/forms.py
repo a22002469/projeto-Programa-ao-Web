@@ -81,5 +81,8 @@ class ProjetosForm(ModelForm):
 
             'nome': 'Insira o nome',
             'descricao': 'Insira a sua descricao',
+            'data' : 'Data',
+            'linguagues' : 'Linguagem usada',
             'imagem':'Insira a sua imagem',
+
         }
