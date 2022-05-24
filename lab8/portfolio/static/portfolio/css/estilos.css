@@ -107,7 +107,7 @@
 }
 
 .containerContacto:hover{
-    box-shadow: rgba(27, 250, 2, 0.8) -5px -5px, rgba(45, 204, 21, 0.6) -10px -10px, rgba(16, 105, 4, 0.4) -15px -15px, rgba(36, 117, 37, 0.2) -20px -20px;
+    box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
 }
 
 
@@ -208,7 +208,7 @@ footer {
     width: auto;
     position: relative;
     bottom: 60px;
-   left: 108%;
+   left: 106%;
 
 
 }
