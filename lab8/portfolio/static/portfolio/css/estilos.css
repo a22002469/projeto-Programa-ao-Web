@@ -126,8 +126,15 @@
     border-radius: 10px;
 }
 
+
+
 .containerQuizz:hover{
     box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
+}
+.imageGrafico{
+    position: relative;
+    bottom: 300px;
+   left: 50%;
 }
 
 .btnTerminar{
@@ -190,11 +197,7 @@ footer {
   background-size: 0 3px, 100% 3px;
 }
 
-.imageGrafico{
-    position: absolute;
-        top: 13%;
-        right: 1%;
-}
+
 
 .containerProjeto {
     display: block;
