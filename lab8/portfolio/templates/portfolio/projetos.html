@@ -4,7 +4,7 @@
 	<h3 style="color:white">Projetos</h3>
 
 
-<div class="container">
+<div class="containerProjeto">
     {% for projeto in projetos %}
         <div>
     <p style="color: white">
@@ -14,11 +14,12 @@
         Descrição: {{ projeto.descricao }}.
         </p>
 
-            <p>
-                 <img src="{{projeto.imagem.url}}">
-            </p>
+
+
+        <img src="{{projeto.imagem.url}}">
 
  </div>
+
 
 
 
