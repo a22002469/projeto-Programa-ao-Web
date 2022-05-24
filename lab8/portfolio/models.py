@@ -12,7 +12,7 @@ class Post(models.Model):
 
 
 class Quizz(models.Model):
-    nome = models.CharField(max_length=50)
+    nome = models.CharField(max_length=100)
     pergunta1 = models.CharField(max_length=50)
     pergunta2 = models.CharField(max_length=50)
     pergunta3 = models.CharField(max_length=50)

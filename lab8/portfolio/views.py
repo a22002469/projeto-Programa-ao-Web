@@ -7,6 +7,8 @@ from portfolio.models import Post
 from portfolio.forms import QuizzForm
 from portfolio.models import Quizz
 
+from portfolio.quizz import desenha_graficodados
+
 
 def home_page_view(request):
     return render(request, 'portfolio/layout.html')
@@ -38,6 +40,7 @@ def contacto_page_view(request):
 
 
 def quizz_page_view(request):
+    desenha_graficodados(Quizz.objects.all())
     form = QuizzForm(request.POST, use_required_attribute=False)
 
     if form.is_valid():

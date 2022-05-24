@@ -39,12 +39,12 @@ class QuizzForm(ModelForm):
         fields = '__all__'
 
         widgets = {
-            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Insira o nome a apresentar'}),
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Insira Nome'}),
         }
 
         labels = {
 
-            'nome': 'Insira o nome a apresentar',
+            'nome': 'Nome',
 
             'pergunta1': 'pergunta 1?',
 
