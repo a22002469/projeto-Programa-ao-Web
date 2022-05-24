@@ -33,3 +33,9 @@ class Projetos(models.Model):
 
     def __str__(self):
         return f"{self.nome}"
+
+class Cadeiras(models.Model):
+    nome = models.CharField(max_length=50)
+    ano = models.IntegerField(max_length=50)
+    semestre = models.IntegerField(max_length=50)
+    ects = models.IntegerField(max_length=50)

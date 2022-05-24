@@ -86,3 +86,26 @@ class ProjetosForm(ModelForm):
             'imagem':'Insira a sua imagem',
 
         }
+
+        class CadeirasForm(ModelForm):
+            class Meta:
+                model = Projetos
+                fields = '__all__'
+
+                # ferramentas
+                widgets = {
+
+                }
+
+                help_texts = {
+
+                }
+
+                labels = {
+
+                    'nome': 'Insira o nome',
+                    'ano': 'Ano',
+                    'semestre': 'Semestre',
+                    'ects': 'ects',
+
+                }

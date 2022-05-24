@@ -17,7 +17,7 @@ def desenha_graficodados(arg):
 
     dadosGraficos.figure(figsize=(9, 7))
 
-    dadosGraficos.barh(pessoa, pontuacao, color='green')
+    dadosGraficos.barh(pessoa, pontuacao, color = '#201120FF')
 
     dadosGraficos.title("Pontuação do Quizz!")
     dadosGraficos.ylabel("Participantes")
