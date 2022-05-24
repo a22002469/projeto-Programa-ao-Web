@@ -6,6 +6,7 @@ from portfolio.forms import PostForm
 from portfolio.models import Post
 from portfolio.forms import QuizzForm
 from portfolio.models import Quizz
+from portfolio.models import Projetos
 
 from portfolio.quizz import desenha_graficodados
 
@@ -28,7 +29,8 @@ def formacao_page_view(request):
 
 
 def projetos_page_view(request):
-    return render(request, 'portfolio/projetos.html')
+    context = {'projetos': Projetos.objects.all()}
+    return render(request, 'portfolio/projetos.html', context)
 
 
 def competencias_page_view(request):

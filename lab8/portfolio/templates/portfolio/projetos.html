@@ -1,16 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>projetos</title>
-</head>
-<body>
 {% extends 'portfolio/layout.html' %}
-<main>
+
 {% block main %}
-	<h3>Projetos</h3>
-    <p>texto texto texto texto texto texto texto </p>
+	<h3 style="color:white">Projetos</h3>
+
+
+<div class="container">
+    {% for projeto in projetos %}
+        <div>
+    <p style="color: white">
+    Autor: {{projeto.nome }}.
+    </p>
+        <p style="color: white">
+        Descrição: {{ projeto.descricao }}.
+        </p>
+
+            <p>
+                 <img src="{{projeto.imagem.url}}">
+            </p>
+
+ </div>
+
+
+
+    {% endfor %}
+</div>
 {% endblock main%}
-</main>
-</body>
-</html>

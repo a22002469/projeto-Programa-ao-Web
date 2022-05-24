@@ -2,6 +2,7 @@ from django.forms import ModelForm
 from django import forms
 from .models import Post
 from .models import Quizz
+from .models import Projetos
 
 
 class PostForm(ModelForm):
@@ -59,4 +60,26 @@ class QuizzForm(ModelForm):
         }
 
         help_texts = {
+        }
+
+
+class ProjetosForm(ModelForm):
+    class Meta:
+        model = Projetos
+        fields = '__all__'
+
+        # ferramentas
+        widgets = {
+
+        }
+
+        help_texts = {
+
+        }
+
+        labels = {
+
+            'nome': 'Insira o nome',
+            'descricao': 'Insira a sua descricao',
+            'imagem':'Insira a sua imagem',
         }
