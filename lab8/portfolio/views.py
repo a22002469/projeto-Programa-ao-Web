@@ -7,8 +7,8 @@ from portfolio.models import Post
 from portfolio.forms import QuizzForm
 from portfolio.models import Quizz
 from portfolio.models import Projetos
-from  portfolio.models import Cadeiras
-
+from portfolio.models import Cadeiras
+from portfolio.models import Sobre
 
 from portfolio.quizz import desenha_graficodados
 
@@ -27,17 +27,14 @@ def licenciatura_page_view(request):
     return render(request, 'portfolio/licenciatura.html', context)
 
 
-def formacao_page_view(request):
-
-    return render(request, 'portfolio/formação.html')
-
+def sobre_page_view(request):
+    context = {'sobre':Sobre.objects.all()}
+    return render(request, 'portfolio/sobre.html',context)
 
 
 def projetos_page_view(request):
     context = {'projetos': Projetos.objects.all()}
     return render(request, 'portfolio/projetos.html', context)
-
-
 
 
 def competencias_page_view(request):
@@ -57,7 +54,7 @@ def quizz_page_view(request):
         return HttpResponseRedirect(request.path_info)
 
     context = {
-        'form' : form,
+        'form': form,
     }
 
     return render(request, 'portfolio/quizz.html', context)

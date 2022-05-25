@@ -29,16 +29,27 @@ class Projetos(models.Model):
     linguagens = models.CharField(max_length=100)
     imagem = models.ImageField(upload_to='media/', null=True)
 
-
-
     def __str__(self):
         return f"{self.nome}"
+
 
 class Cadeiras(models.Model):
     nome = models.CharField(max_length=50)
     ano = models.IntegerField(max_length=50)
     semestre = models.IntegerField(max_length=50)
     ects = models.IntegerField(max_length=50)
+
+    def __str__(self):
+        return f"{self.nome}"
+
+
+class Sobre(models.Model):
+    nome = models.CharField(max_length=50)
+    acronimo = models.CharField(max_length=50)
+    ano = models.IntegerField(max_length=50)
+    criador = models.CharField(max_length=50)
+
+
 
     def __str__(self):
         return f"{self.nome}"

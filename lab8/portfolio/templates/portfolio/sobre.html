@@ -1,0 +1,35 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+	<h3 class="titulo">Sobre Este Site</h3>
+
+
+<div class="containerFormacao">
+    {% for escolhido in sobre %}
+        <div>
+    <p style="color: white">
+    Nome da Linguagem : {{escolhido.nome }}.
+    </p>
+        <p style="color: white">
+        Acrónimo : {{ escolhido.acronimo }}.
+        </p>
+
+            <p style="color: white">
+                Ano: {{ escolhido.ano }}.
+            </p>
+            <p style="color: white">
+                Criador: {{ escolhido.criador }}
+            </p>
+
+
+
+
+
+ </div>
+
+
+
+
+    {% endfor %}
+</div>
+{% endblock main%}
