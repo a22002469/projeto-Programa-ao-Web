@@ -234,9 +234,11 @@ footer {
 }
 
 
+
 .containerFormacao {
     display: flex;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: left;
 
 
 
@@ -244,11 +246,12 @@ footer {
 
 
 .containerFormacao > div {
+
     width: 20%;
     padding: 2%;
     margin-top: 3%;
     margin-left: 2%;
-
+    color: white;
     background-color: #201120FF;
     box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
     height: 250px;
@@ -257,6 +260,10 @@ footer {
 .containerFormacao > div:hover{
     box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
 }
+
+
+
+
 
 
 

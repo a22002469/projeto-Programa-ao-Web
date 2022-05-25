@@ -6,6 +6,8 @@
 
 <div class="containerFormacao">
     {% for cadeira in cadeiras %}
+
+
         <div>
     <p style="color: white">
     Nome: {{cadeira.nome }}.
@@ -21,13 +23,7 @@
                 Ects: {{ cadeira.ects }}
             </p>
 
-
-
- </div>
-
-
-
-
-    {% endfor %}
+</div>
+{% endfor %}
 </div>
 {% endblock main%}
