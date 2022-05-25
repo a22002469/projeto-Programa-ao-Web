@@ -7,6 +7,8 @@ from portfolio.models import Post
 from portfolio.forms import QuizzForm
 from portfolio.models import Quizz
 from portfolio.models import Projetos
+from  portfolio.models import Cadeiras
+
 
 from portfolio.quizz import desenha_graficodados
 
@@ -25,12 +27,16 @@ def licenciatura_page_view(request):
 
 
 def formacao_page_view(request):
-    return render(request, 'portfolio/formação.html')
+    context = {'cadeiras': Cadeiras.objects.all()}
+    return render(request, 'portfolio/formação.html', context)
+
 
 
 def projetos_page_view(request):
     context = {'projetos': Projetos.objects.all()}
     return render(request, 'portfolio/projetos.html', context)
+
+
 
 
 def competencias_page_view(request):

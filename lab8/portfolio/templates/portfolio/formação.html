@@ -1,7 +1,33 @@
-
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-	<h3>formação</h3>
-    <p>texto texto texto texto texto texto texto </p>
+	<h3 style="color:white">Formação</h3>
+
+
+<div class="containerProjeto">
+    {% for cadeira in cadeiras %}
+        <div>
+    <p style="color: white">
+    Nome: {{cadeira.nome }}.
+    </p>
+        <p style="color: white">
+        Ano: {{ cadeira.ano}}.
+        </p>
+
+            <p style="color: white">
+                Semestre: {{ cadeira.semestre }}.
+            </p>
+            <p style="color: white">
+                Ects: {{ cadeira.ects }}
+            </p>
+
+
+
+ </div>
+
+
+
+
+    {% endfor %}
+</div>
 {% endblock main%}

@@ -3,6 +3,7 @@ from django import forms
 from .models import Post
 from .models import Quizz
 from .models import Projetos
+from .models import Cadeiras
 
 
 class PostForm(ModelForm):
@@ -89,7 +90,7 @@ class ProjetosForm(ModelForm):
 
         class CadeirasForm(ModelForm):
             class Meta:
-                model = Projetos
+                model = Cadeiras
                 fields = '__all__'
 
                 # ferramentas
