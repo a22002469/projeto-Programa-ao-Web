@@ -14,7 +14,7 @@ from portfolio.quizz import desenha_graficodados
 
 
 def home_page_view(request):
-    return render(request, 'portfolio/layout.html')
+    return render(request, 'portfolio/home.html')
 
 
 # Create your views here.

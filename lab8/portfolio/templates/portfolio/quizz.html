@@ -2,7 +2,7 @@
 
 
 {% block main %}
-	<h3 style="color: white">Quizz</h3>
+	<h3 class="titulo">Quizz</h3>
     <form style="color: white" class="containerQuizz" action="" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
