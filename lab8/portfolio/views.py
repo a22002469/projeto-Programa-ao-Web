@@ -23,12 +23,13 @@ def apresentacao_page_view(request):
 
 
 def licenciatura_page_view(request):
-    return render(request, 'portfolio/licenciatura.html')
+    context = {'cadeiras': Cadeiras.objects.all()}
+    return render(request, 'portfolio/licenciatura.html', context)
 
 
 def formacao_page_view(request):
-    context = {'cadeiras': Cadeiras.objects.all()}
-    return render(request, 'portfolio/formação.html', context)
+
+    return render(request, 'portfolio/formação.html')
 
 
 

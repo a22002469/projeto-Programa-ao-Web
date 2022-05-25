@@ -4,26 +4,5 @@
 	<h3 class="titulo">Formação</h3>
 
 
-<div class="containerFormacao">
-    {% for cadeira in cadeiras %}
 
-
-        <div>
-    <p style="color: white">
-    Nome: {{cadeira.nome }}.
-    </p>
-        <p style="color: white">
-        Ano: {{ cadeira.ano}}.
-        </p>
-
-            <p style="color: white">
-                Semestre: {{ cadeira.semestre }}.
-            </p>
-            <p style="color: white">
-                Ects: {{ cadeira.ects }}
-            </p>
-
-</div>
-{% endfor %}
-</div>
 {% endblock main%}
