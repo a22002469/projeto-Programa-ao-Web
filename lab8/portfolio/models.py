@@ -53,3 +53,13 @@ class Sobre(models.Model):
 
     def __str__(self):
         return f"{self.nome}"
+
+
+
+class Web(models.Model):
+    nome = models.CharField(max_length=50)
+    noticia = models.CharField(max_length=50)
+    imagem = models.ImageField(upload_to='media/', null=True)
+
+    def __str__(self):
+        return f"{self.nome}"

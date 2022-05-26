@@ -9,6 +9,7 @@ from portfolio.models import Quizz
 from portfolio.models import Projetos
 from portfolio.models import Cadeiras
 from portfolio.models import Sobre
+from portfolio.models import Web
 
 from portfolio.quizz import desenha_graficodados
 
@@ -61,7 +62,8 @@ def quizz_page_view(request):
 
 
 def web_page_view(request):
-    return render(request, 'portfolio/web.html')
+    context = {'web': Web.objects.all()}
+    return render(request, 'portfolio/web.html', context)
 
 
 def blog_page_view(request):
