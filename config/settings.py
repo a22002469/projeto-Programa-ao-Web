@@ -41,11 +41,17 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',  # novo
     'django.contrib.staticfiles',
+    'portfolio',
     'cloudinary_storage',
     'cloudinary',
-    'portfolio',
 
 )
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "dmno3yrmr",
+    'API_KEY': "822164628752699",
+    'API_SECRET': "_uOzs4HXllGS3YcFcKmIpK4zXak",
+}
 
 MIDDLEWARE = [
 
@@ -126,18 +132,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# STATIC_URL = '/portfolio/static/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = '/portfolio/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static')), str(BASE_DIR.joinpath('media'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': "dmno3yrmr",
-    'API_KEY': "822164628752699",
-    'API_SECRET': "_uOzs4HXllGS3YcFcKmIpK4zXak",
-}
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',  # finds files stored in the `STATICFILES_DIRS` setting.
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',  # finds files stored in the 'static' subdirectory of
+    # each app.
+]
