@@ -49,11 +49,16 @@ def login_page_view(request):
         if user is not None:
             login(request, user)
             context = {'post': Post.objects.all()}
-            return render(request, 'portfolio/home.html', context)
+            return render(request, 'portfolio/blog.html', context)
         else:
-            return render(request, 'portfolio/login.html', {'message': "Credenciais inválidos"})
+            return render(request, 'portfolio/home.html', {'message': "Credenciais inválidos"})
 
     return render(request, 'portfolio/login.html')
+
+
+def logout_page_view(request):
+    logout(request)
+    return render(request, 'portfolio/home.html')
 
 
 def competencias_page_view(request):
