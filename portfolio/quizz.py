@@ -1,4 +1,6 @@
 import matplotlib.pyplot as dadosGraficos
+
+
 def informacao_sobre_utilizadores(arg):
     dados = {}
     for quizz in arg:
@@ -17,7 +19,7 @@ def desenha_graficodados(arg):
 
     dadosGraficos.figure(figsize=(9, 7))
 
-    dadosGraficos.barh(pessoa, pontuacao, color = '#201120FF')
+    dadosGraficos.barh(pessoa, pontuacao, color='#201120FF')
 
     dadosGraficos.title("Pontuação do Quizz!")
     dadosGraficos.ylabel("Participantes")
@@ -40,7 +42,5 @@ def Pontuacao(input):
 
     if input.pergunta4.lower() == "ola":
         pontuacao += 5
-
-
 
     return pontuacao
