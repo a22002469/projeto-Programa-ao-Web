@@ -49,16 +49,13 @@ class Sobre(models.Model):
     ano = models.IntegerField(max_length=50)
     criador = models.CharField(max_length=50)
 
-
-
     def __str__(self):
         return f"{self.nome}"
 
 
-
 class Web(models.Model):
     nome = models.CharField(max_length=200)
-    noticia = models.CharField()
+    noticia = models.CharField(max_length=1000)
     imagem = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
