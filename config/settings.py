@@ -47,12 +47,6 @@ INSTALLED_APPS = (
 
 )
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': "dmno3yrmr",
-    'API_KEY': "822164628752699",
-    'API_SECRET': "_uOzs4HXllGS3YcFcKmIpK4zXak",
-}
-
 MIDDLEWARE = [
 
     'django.middleware.security.SecurityMiddleware',
@@ -131,11 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 STATIC_URL = 'static/'
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-MEDIA_URL = ''
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('/portfolio/static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = '/media/'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "dmno3yrmr",
+    'API_KEY': "822164628752699",
+    'API_SECRET': "_uOzs4HXllGS3YcFcKmIpK4zXak",
+}
