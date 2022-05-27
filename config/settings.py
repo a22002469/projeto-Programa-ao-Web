@@ -39,8 +39,10 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic', # novo
+    'whitenoise.runserver_nostatic',  # novo
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'portfolio',
 
 )
@@ -54,7 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # novo
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # novo
+
 
 ]
 
@@ -82,7 +85,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-   "default": env.dj_db_url("DATABASE_URL")
+    "default": env.dj_db_url("DATABASE_URL")
 
 }
 
@@ -104,6 +107,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "dmno3yrmr",
+    'API_KEY': "822164628752699",
+    'API_SECRET': "_uOzs4HXllGS3YcFcKmIpK4zXak",
+}
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -127,6 +135,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/portfolio/"
 STATIC_URL = '/static/'
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
