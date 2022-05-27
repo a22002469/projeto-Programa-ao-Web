@@ -1,0 +1,31 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+	<h3 class="titulo">Web</h3>
+
+
+<div class="containerWeb">
+    {% for escolhido in web %}
+        <div>
+    <p style="color: white">
+   Titulo : {{escolhido.nome }}.
+    </p>
+        <p style="color: white">
+        Noticia : {{ escolhido.noticia }}.
+        </p>
+
+          <img src="{{escolhido.imagem.url}}">
+
+
+
+
+
+
+ </div>
+
+
+
+
+    {% endfor %}
+</div>
+{% endblock main%}

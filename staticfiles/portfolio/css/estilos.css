@@ -1,0 +1,348 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.background {
+    background-image: url("../images/coding.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #201120FF;
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    padding: 1em;
+    color: white;
+}
+
+
+
+.right {
+    display: flex;
+    justify-contents: space-between;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container{
+
+}
+
+
+.rright {
+    color: white;
+    position: sticky;
+    display: flex;
+    justify-contents: space-between;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+    background: none;
+    border: solid 1px #121212;
+    transition: color 200ms;
+
+}
+
+.rright:is(:hover,:focus) {
+    color: black;
+}
+
+.rright::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    z-index: -1;
+
+    background-color: white;
+
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 500ms;
+}
+
+.rright:is(:hover,:focus)::after {
+    transform: scale(1);
+}
+
+
+.container {
+    display: block;
+    justify-content: center;
+
+
+}
+
+.container > div {
+    width: 70%;
+    padding: 2%;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #201120FF;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+
+
+
+.containerContacto{
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    padding: 2%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #201120FF;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
+    border-radius: 10px;
+}
+
+.containerContacto:hover{
+    box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
+}
+
+
+.containerQuizz{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 40%;
+    height: auto;
+    padding: 2%;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: auto;
+    background-color: #201120FF;
+    box-shadow: rgba(91, 3, 122, 0.8) 5px 5px, rgba(76, 1, 126, 0.6) 10px 10px, rgba(37, 1, 65, 0.4) 15px 15px, rgba(13, 0, 24, 0.2) 20px 20px;
+    border-radius: 10px;
+}
+
+.errorlist{
+display:none;
+}
+
+.containerQuizz:hover{
+    box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
+}
+.imageGrafico{
+    position: relative;
+    bottom: 200px;
+   left: 50%;
+}
+
+.btnTerminar{
+
+    width: 10%;
+    background-color: green;
+}
+
+
+
+
+
+header {
+    height: 10vh;
+    background: #201120FF;
+    color: blue;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #201120FF;
+    color: white;
+    text-align: center;
+}
+
+.textChange {
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 3em;
+
+    color: white;
+    background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px;
+  background-position: 100% 100%, 0% 100%;
+
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+}
+
+.textChange:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+
+
+.containerProjeto {
+    display: block;
+    justify-content: center;
+
+
+
+}
+.containerProjeto img{
+    height: 300px;
+    width: auto;
+    position: relative;
+    bottom: 90px;
+   left: 106%;
+
+
+}
+
+.containerProjeto > div {
+    width: 70%;
+    padding: 2%;
+    margin-top: 3%;
+    margin-left: 2%;
+
+    background-color: #201120FF;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
+    height: 250px;
+    border-radius: 10px;
+}
+.containerProjeto > div:hover{
+    box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
+}
+
+
+
+.containerFormacao {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+
+
+
+
+}
+
+
+.containerFormacao > div {
+
+    width: 20%;
+    padding: 2%;
+    margin-top: 3%;
+    margin-left: 7%;
+    margin-bottom: 2%;
+    color: white;
+    background-color: #201120FF;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
+    height: 250px;
+    border-radius: 10px;
+}
+.containerFormacao > div:hover{
+    box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
+}
+
+.tituloAnos{
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: #64C8C8FF;
+}
+.titulo{
+
+    display: flex;
+   align-items: center;
+    justify-content: center;
+    font-size: 2em;
+
+    color: white;
+    background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px;
+  background-position: 50% 100%, 0% 100%;
+
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+}
+
+.titulo:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+
+.containerWeb {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+
+
+}
+
+
+.containerWeb > div {
+    text-align: center;
+    width: 20%;
+    padding: 2%;
+    margin-top: 3%;
+    margin-left: 7%;
+    color: white;
+    background-color: #201120FF;
+    box-shadow: rgba(27, 250, 2, 0.8) 5px 5px, rgba(45, 204, 21, 0.6) 10px 10px, rgba(16, 105, 4, 0.4) 15px 15px, rgba(36, 117, 37, 0.2) 20px 20px;
+    height: 350px;
+    border-radius: 10px;
+}
+.containerWeb > div:hover{
+    box-shadow: rgba(92, 199, 248, 0.8) -5px -5px, rgba(8, 128, 190, 0.6) -10px -10px, rgba(6, 44, 175, 0.4) -15px -15px, rgba(0, 0, 23, 0.2) -20px -20px;
+}
+
+.containerWeb img{
+    height: 300px;
+    width: auto;
+    position: relative;
+    top: 15px;
+
+
+}
+
+
+

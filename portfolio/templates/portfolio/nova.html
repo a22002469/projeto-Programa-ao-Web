@@ -1,0 +1,28 @@
+
+
+
+{% load static %}
+
+<style>
+    body{
+        background-color: cornflowerblue;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos.css'%}"/>
+{% block main %}
+<h3>Criacao de um Post</h3>
+<form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+<nav class="right">
+        <a class="rright"  href="{% url 'portfolio:blog' %}"  >Cancelar</a>
+        <input  class="rright" type="submit" value="Gravar">
+
+</nav>
+</form>
+
+
+{% endblock %}
+
+
+

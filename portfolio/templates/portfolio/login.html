@@ -1,0 +1,18 @@
+{% load static %}
+
+<style>
+    body{
+        background-color: cornflowerblue;
+    }
+</style>
+
+{% block main %}
+	<h3 class="titulo">Login</h3>
+<form action="{% url 'portfolio:login' %}" method="post">
+            {% csrf_token %}
+            <p>Username: <input type="text" name="username" placeholder="Username"></p>
+            <p>Password: <input type="password" name="password" placeholder="Username"></p>
+            <input type="submit">
+        </form>
+
+{% endblock main%}
