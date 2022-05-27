@@ -57,8 +57,8 @@ class Sobre(models.Model):
 
 
 class Web(models.Model):
-    nome = models.CharField(max_length=50)
-    noticia = models.CharField(max_length=50)
+    nome = models.CharField(max_length=200)
+    noticia = models.URLField(max_length=50)
     imagem = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
