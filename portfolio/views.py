@@ -51,7 +51,7 @@ def login_page_view(request):
             context = {'post': Post.objects.all()}
             return render(request, 'portfolio/blog.html', context)
         else:
-            return render(request, 'portfolio/home.html', {'message': "Credenciais inválidos"})
+            return render(request, 'portfolio/login.html', {'message': "Credenciais inválidos"})
 
     return render(request, 'portfolio/login.html')
 
