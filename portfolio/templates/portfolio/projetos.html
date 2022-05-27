@@ -1,36 +1,36 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-	<h3 class="titulo">Projetos</h3>
+    <h3 class="titulo">Projetos</h3>
 
 
-<div class="containerProjeto">
-    {% for projeto in projetos %}
-        <div>
-    <p style="color: white">
-    Autor: {{projeto.nome }}.
-    </p>
-        <p style="color: white">
-        Descrição: {{ projeto.descricao }}.
-        </p>
+    <div class="containerProjeto">
+        {% for projeto in projetos %}
+            <div>
+                <p style="color: white">
+                    Autor: {{ projeto.nome }}.
+                </p>
+                <p style="color: white">
+                    Descrição: {{ projeto.descricao }}.
+                </p>
 
-            <p style="color: white">
-                Data: {{ projeto.data }}.
-            </p>
-            <p style="color: white">
+                <p style="color: white">
+                    Data: {{ projeto.data }}.
+                </p>
+                <p style="color: white">
+
+                    Linguagens: {{ projeto.linguagens }}
+                </p>
+
+
                 {% load static %}
-                Linguagens: {{ projeto.linguagens }}
-            </p>
+                <img src="{{ projeto.imagem.url }}" alt="Projetos">
 
-
-
-        <img src="{{projeto.imagem.url}}" alt="Projetos">
-
- </div>
+            </div>
 
 
 
 
-    {% endfor %}
-</div>
-{% endblock main%}
+        {% endfor %}
+    </div>
+{% endblock main %}
