@@ -14,5 +14,8 @@
             <p>Password: <input type="password" name="password" placeholder="Username"></p>
             <input type="submit">
         </form>
+    {% if message %}
+                {{ message }}
+            {% endif %}
 
 {% endblock main%}
