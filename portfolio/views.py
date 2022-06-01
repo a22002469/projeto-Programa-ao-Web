@@ -12,6 +12,7 @@ from portfolio.models import Projetos
 from portfolio.models import Cadeiras
 from portfolio.models import Sobre
 from portfolio.models import Web
+from portfolio.models import Tfc
 
 from portfolio.quizz import desenha_graficodados
 
@@ -63,6 +64,10 @@ def logout_page_view(request):
 
 def competencias_page_view(request):
     return render(request, 'portfolio/competencias.html')
+
+def tfc_page_view(request):
+    context = {'tfc' : Tfc.objects.all()}
+    return render(request, 'portfolio/tfc.html', context)
 
 
 def contacto_page_view(request):

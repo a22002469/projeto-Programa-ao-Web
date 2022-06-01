@@ -60,3 +60,14 @@ class Web(models.Model):
 
     def __str__(self):
         return f"{self.nome}"
+
+
+class Tfc(models.Model):
+    autores = models.CharField(max_length=500)
+    orientadores = models.CharField(max_length=500)
+    ano = models.IntegerField()
+    titulo = models.CharField(max_length=200)
+    resumo = models.CharField(max_length=500)
+    imagem = models.ImageField(upload_to='media/', null=True)
+    relatorio = models.CharField(max_length=500)
+

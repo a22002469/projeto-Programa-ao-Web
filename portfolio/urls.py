@@ -20,5 +20,6 @@ urlpatterns = [
     path('quizz', views.quizz_page_view, name='quizz'),
     path('login', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
+    path('tfc', views.)
 
 ]

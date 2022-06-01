@@ -4,6 +4,7 @@ from .models import Post
 from .models import Quizz
 from .models import Projetos
 from .models import Cadeiras
+from .models import Tfc
 
 
 class PostForm(ModelForm):
@@ -110,3 +111,30 @@ class ProjetosForm(ModelForm):
                     'ects': 'ects',
 
                 }
+
+
+class TfcForm(ModelForm):
+    class Meta:
+        model = Tfc
+        fields = '__all__'
+
+        # ferramentas
+        widgets = {
+
+        }
+
+        help_texts = {
+
+        }
+
+        labels = {
+
+            'Autores': 'Insira os autores',
+            'orientadores': 'orientadores',
+            'ano' : 'Data',
+            'titulo' : 'titulo',
+            'resumo' : 'resumo',
+            'imagem':'Insira a sua imagem',
+            'relatorio':'relatorio',
+
+        }
