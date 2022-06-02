@@ -3,30 +3,31 @@
 {% block main %}
 	<h3 class="titulo">Trabalhos Finais de Curso</h3>
 
-<div class="containerWeb">
-
+<div class="containerTfc">
+    {% for escolhido in tfc %}
         <div>
-    <p>
-        Autores:
+    <p style="color: white">
+   Titulo : {{escolhido.autores }}.
     </p>
-        <p>
-            Orientadores:
-        </p>
+        <p style="color: white">
+   Titulo : {{escolhido.orientadores }}.
+    </p>
+            <p style="color: white">
+   Ano : {{escolhido.ano }}.
+    </p>
+            <p style="color: white">
+   Titulo : {{escolhido.titulo }}.
+    </p>
+            <p style="color: white">
+   Titulo : {{escolhido.resumo }}.
+    </p>
+<div>
+            <img src="{{ escolhido.imagem.url }}" alt="">
+</div>
 
-            <p>
-                Ano:
-            </p>
-
-            <p>
-                Titulo:
-            </p>
-
-            <p>
-                Resumo:
-            </p>
 
 
-         <img class="imageGrafico" src="/static/portfolio/images/dadosGraficos.png">
+
 
 
 
@@ -37,15 +38,7 @@
 
 
 
-<div>
 
-
-
-</div>
-
-
-
-
-
+    {% endfor %}
 </div>
 {% endblock main%}
