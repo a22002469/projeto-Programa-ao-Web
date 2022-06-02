@@ -54,8 +54,8 @@ class Sobre(models.Model):
 
 
 class Web(models.Model):
-    nome = models.CharField(max_length=50)
-    noticia = models.CharField(max_length=50)
+    nome = models.CharField(max_length=200)
+    noticia = models.CharField(max_length=1000)
     imagem = models.ImageField(upload_to='media/', null=True)
 
     def __str__(self):
@@ -70,4 +70,6 @@ class Tfc(models.Model):
     resumo = models.CharField(max_length=500)
     imagem = models.ImageField(upload_to='media/', null=True)
     relatorio = models.CharField(max_length=500)
+    def __str__(self):
+        return f"{self.titulo}"
 
