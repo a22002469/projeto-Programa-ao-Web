@@ -9,9 +9,18 @@
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos.css'%}"/>
 
     {% block style %}{% endblock style %}
+<script>
+    function realtimeClock() {
 
+            var rtClock = new Date();
+            document.getElementById("Tempo").innerHTML = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds();
+            var t = setTimeout(realtimeClock, 1);
+        }
+</script>
 </head>
-<body class="background">
+
+
+<body class="background" onload="realtimeClock()">
     <header>
         <div class="textChange">Daniel Granja</div>
         <nav class="right" >
@@ -51,6 +60,9 @@
     <footer >
         <div>
             ULHT : 2022
+        </div>
+        <div id="Tempo">
+
         </div>
     </footer>
 </body>
