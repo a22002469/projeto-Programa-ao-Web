@@ -130,3 +130,7 @@ def view_apagar_post(request, post_id):
     post = Post.objects.get(id=post_id)
     post.delete()
     return HttpResponseRedirect(reverse('portfolio:blog'))
+
+def api_page_view(request):
+
+    return render(request, 'portfolio/api.html')

@@ -20,6 +20,7 @@ urlpatterns = [
     path('quizz', views.quizz_page_view, name='quizz'),
     path('login', views.login_page_view, name='login'),
     path('logout', views.logout_page_view, name='logout'),
-    path('tfc', views.tfc_page_view, name ='tfc'),
+    path('tfc', views.tfc_page_view, name='tfc'),
+    path('api', views.api_page_view, name='api'),
 
 ]
