@@ -1,5 +1,76 @@
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos.css' %}"/>
+<script>
+    src = "https://api.ipma.pt/open-data/forecast/warnings/warnings_www.json"
+
+    document.addEventListener('DOMContentLoaded', function() {
+fetch(src)// envia GET request ao URL
+.then(response => response.json()) // Põe a resposta no formato json
+.then(data => {
+    for (let i = 0; i< 50;i++ ){
+
+        const text = data[i].text;
+
+
+        const awarenessTypeName = data[i].awarenessTypeName;
+        const startTime = data[i].startTime;
+        const awarenessLevelID = data[i].awarenessLevelID;
+        const endTime = data[i].awarenessTypeName;
+
+
+
+
+
+        document.getElementById("ipma").innerHTML += `text = ${text} endTime = ${endTime} awarenessLevelID = ${awarenessLevelID}  startTime = ${startTime} awarenessTypeName = ${awarenessTypeName} <br>`;
+
+
+}
+}); // põe os dados na consola
+});
+
+</script>
+
+<body class="background" onload="realtimeClock()">
+    <header>
+        <div class="textChange">Daniel Granja</div>
+
+        <nav class="right" >
+            <a class="rright" href="{% url 'portfolio:api' %}">Api</a>
+            <a class="rright" href="{% url 'portfolio:home' %}">Home</a>
+            <a class="rright" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+            <a class="rright" href="{% url 'portfolio:apresentação' %}">Apresentação</a>
+
+
+            <a class="rright" href="{% url 'portfolio:projetos' %}">Projetos</a>
+            <a class="rright" href="{% url 'portfolio:blog' %}">Blog</a>
+            <a class="rright" href="{% url 'portfolio:quizz' %}">Quizz</a>
+             <a class="rright" href="{% url 'portfolio:contacto' %}">Contacto</a>
+             <a class="rright" href="{% url 'portfolio:web' %}">Web</a>
+            <a class="rright" href="{% url 'portfolio:tfc' %}">Tfc</a>
+
+            <a class="rright" href="{% url 'portfolio:sobre' %}">Sobre este Site</a>
+                {% if not request.user.is_authenticated %}
+
+             <a class="rright" href="{% url 'portfolio:login' %}">Login</a>
+            {% endif %}
+
+            {% if request.user.is_authenticated %}
+                     <a class="rright" href="{% url 'portfolio:logout' %}">Logout</a>
+        {% endif %}
+
+        </nav>
+
+    </header>
+
+
+
+
+
+</body>
 {% block main %}
+<h3 class="titulo">Api</h3>
+    <div style="color: white" class="containerApi" id = ipma></div>
+
 
 {% endblock main %}
