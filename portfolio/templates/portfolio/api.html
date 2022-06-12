@@ -29,15 +29,24 @@ fetch(src)// envia GET request ao URL
 }); // põe os dados na consola
 });
 
+
+
+
+
+
+
 </script>
+
+
 
 <body class="background" onload="realtimeClock()">
     <header>
         <div class="textChange">Daniel Granja</div>
 
         <nav class="right" >
-            <a class="rright" href="{% url 'portfolio:api' %}">Api</a>
+
             <a class="rright" href="{% url 'portfolio:home' %}">Home</a>
+        <a class="rright" href="{% url 'portfolio:api' %}">Api</a>
             <a class="rright" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
             <a class="rright" href="{% url 'portfolio:apresentação' %}">Apresentação</a>
 
@@ -70,6 +79,7 @@ fetch(src)// envia GET request ao URL
 </body>
 {% block main %}
 <h3 class="titulo">Api</h3>
+
     <div style="color: white" class="containerApi" id = ipma></div>
 
 

@@ -1,14 +1,46 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-	<h3 class="titulo">Contacto</h3>
-    <div class="containerContacto" >
-<p>
-    Gmail: danielgranja@gmail.com
 
-        <br>
+    <h3 class="titulo">Contacto</h3>
+    <div class="containerContacto">
+        <p>
+            Gmail: danielgranja@gmail.com
 
-    <a style="color:white;;" href="https://pt.linkedin.com/in/daniel-granja-436058209?trk=people-guest_people_search-card&challengeId=AQHOZex8RMbvRgAAAYD8H8rJbH488r1_Q2M58-pAT3fhAhwniQfb9pV_7diXokERi_htb65-U74RbJw8_2JNlfdLxNS6njSe4g&submissionId=e1b6290a-1c67-f216-4fed-cdc098a0b946&original_referer=">Linkedin</a>
-</p>
+            <br>
+
+            <a style="color:white;;"
+               href="https://pt.linkedin.com/in/daniel-granja-436058209?trk=people-guest_people_search-card&challengeId=AQHOZex8RMbvRgAAAYD8H8rJbH488r1_Q2M58-pAT3fhAhwniQfb9pV_7diXokERi_htb65-U74RbJw8_2JNlfdLxNS6njSe4g&submissionId=e1b6290a-1c67-f216-4fed-cdc098a0b946&original_referer=">Linkedin</a>
+        </p>
     </div>
-{% endblock main%}
+
+    <div class="butaoapi">
+        <button onclick="geolocal()"> Click Here</button>
+    </div>
+    <div class="containerContacto">
+        <p id="location">
+
+        </p>
+    </div>
+    <script>
+        let geo = document.getElementById("location");
+
+        function geolocal() {
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(mostrarPosicao);
+            } else {
+                geo.innerHTML = "We couldn't Work on your location";
+            }
+
+        }
+
+        function mostrarPosicao(position) {
+            geo.innerHTML = position.coords.latitude + "<br>" + position.coords.longitude;
+
+        }
+
+    </script>
+
+
+{% endblock main %}

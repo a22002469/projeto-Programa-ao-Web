@@ -2,69 +2,69 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0
 ">
     <title>Title</title>
-{% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos.css'%}"/>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos.css' %}"/>
 
     {% block style %}{% endblock style %}
-<script>
-    function realtimeClock() {
+    <script>
+        function realtimeClock() {
 
             var rtClock = new Date();
             document.getElementById("Tempo").innerHTML = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds();
             var t = setTimeout(realtimeClock, 1);
         }
-</script>
+    </script>
 </head>
 
 
 <body class="background" onload="realtimeClock()">
-    <header>
-        <div class="textChange">Daniel Granja</div>
-        <nav class="right" >
-            <a class="rright" href="{% url 'portfolio:api' %}">Api</a>
-            <a class="rright" href="{% url 'portfolio:home' %}">Home</a>
-            <a class="rright" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
-            <a class="rright" href="{% url 'portfolio:apresentação' %}">Apresentação</a>
+<header>
+    <div class="textChange">Daniel Granja</div>
+    <nav class="right">
+
+        <a class="rright" href="{% url 'portfolio:home' %}">Home</a>
+        <a class="rright" href="{% url 'portfolio:api' %}">Api</a>
+        <a class="rright" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+        <a class="rright" href="{% url 'portfolio:apresentação' %}">Apresentação</a>
 
 
-            <a class="rright" href="{% url 'portfolio:projetos' %}">Projetos</a>
-            <a class="rright" href="{% url 'portfolio:blog' %}">Blog</a>
-            <a class="rright" href="{% url 'portfolio:quizz' %}">Quizz</a>
-             <a class="rright" href="{% url 'portfolio:contacto' %}">Contacto</a>
-             <a class="rright" href="{% url 'portfolio:web' %}">Web</a>
-            <a class="rright" href="{% url 'portfolio:tfc' %}">Tfc</a>
+        <a class="rright" href="{% url 'portfolio:projetos' %}">Projetos</a>
+        <a class="rright" href="{% url 'portfolio:blog' %}">Blog</a>
+        <a class="rright" href="{% url 'portfolio:quizz' %}">Quizz</a>
+        <a class="rright" href="{% url 'portfolio:contacto' %}">Contacto</a>
+        <a class="rright" href="{% url 'portfolio:web' %}">Web</a>
+        <a class="rright" href="{% url 'portfolio:tfc' %}">Tfc</a>
 
-            <a class="rright" href="{% url 'portfolio:sobre' %}">Sobre este Site</a>
-                {% if not request.user.is_authenticated %}
+        <a class="rright" href="{% url 'portfolio:sobre' %}">Sobre este Site</a>
+        {% if not request.user.is_authenticated %}
 
-             <a class="rright" href="{% url 'portfolio:login' %}">Login</a>
-            {% endif %}
-
-            {% if request.user.is_authenticated %}
-                     <a class="rright" href="{% url 'portfolio:logout' %}">Logout</a>
+            <a class="rright" href="{% url 'portfolio:login' %}">Login</a>
         {% endif %}
 
-        </nav>
+        {% if request.user.is_authenticated %}
+            <a class="rright" href="{% url 'portfolio:logout' %}">Logout</a>
+        {% endif %}
 
-    </header>
+    </nav>
 
-        <main>
-            {% block main %}
-            {% endblock main %}
-        </main>
+</header>
+
+<main>
+    {% block main %}
+    {% endblock main %}
+</main>
 
 
+<footer>
+    <div>
+        ULHT : 2022
+    </div>
+    <div id="Tempo">
 
-    <footer >
-        <div>
-            ULHT : 2022
-        </div>
-        <div id="Tempo">
-
-        </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>

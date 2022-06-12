@@ -411,6 +411,15 @@ footer {
 
 }
 
+
+.butaoapi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+
+}
+
 .containerApi{
     font-size: 2em;
     color: white;
