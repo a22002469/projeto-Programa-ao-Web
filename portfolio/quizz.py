@@ -31,16 +31,16 @@ def desenha_graficodados(arg):
 def Pontuacao(input):
     pontuacao = 0
 
-    if input.pergunta1 == "ola":
+    if input.pergunta1 == "1996":
         pontuacao += 5
 
-    if input.pergunta2 == "ola":
+    if input.pergunta2 == "Js":
         pontuacao += 5
 
-    if input.pergunta3 == "ola":
+    if input.pergunta3 == "5":
         pontuacao += 5
 
-    if input.pergunta4.lower() == "ola":
+    if input.pergunta4.lower() == "1995":
         pontuacao += 5
 
     return pontuacao

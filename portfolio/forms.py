@@ -49,13 +49,13 @@ class QuizzForm(ModelForm):
 
             'nome': 'Nome',
 
-            'pergunta1': 'pergunta 1?',
+            'pergunta1': 'Em que ano Foi criado o css?',
 
-            'pergunta2': 'pergunta 2?',
+            'pergunta2': 'Qual a Abreviatura de JavaScript?',
 
-            'pergunta3': 'pergunta 3?',
+            'pergunta3': 'Qual a versão mais usada do HTML?',
 
-            'pergunta4': 'pergunta 4?',
+            'pergunta4': 'Em que ano Foi criado o JavaScript?',
 
 
 
